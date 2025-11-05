@@ -1,0 +1,119 @@
+/* static/style.css */
+
+/* Page background + base font */
+body {
+  background: linear-gradient(180deg, #f6fbff 0%, #eef6ff 100%);
+  font-family: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+  color: #24314a;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  margin: 0;
+  padding: 2rem 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+/* Card container */
+.card-qr {
+  width: 100%;
+  max-width: 560px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(33, 50, 86, 0.08);
+  padding: 1.75rem;
+  border: 1px solid rgba(36,49,74,0.04);
+}
+
+/* Title */
+.card-qr h3 {
+  font-size: 1.25rem;
+  margin: 0 0 0.75rem 0;
+  color: #17233b;
+  font-weight: 600;
+}
+
+/* Select + form fields */
+.form-select,
+.form-control {
+  border-radius: 10px;
+  height: 44px;
+  box-shadow: none;
+  border: 1px solid rgba(36,49,74,0.08);
+  padding: 0.6rem 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* Spacing for dynamic form fields */
+.form-fields > * {
+  margin-bottom: 0.65rem;
+}
+
+/* Primary button */
+.btn-primary {
+  background: linear-gradient(90deg,#2b80ff,#0066ff);
+  border: none;
+  height: 46px;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 8px 18px rgba(38,102,255,0.12);
+}
+
+/* Secondary small actions */
+.btn-ghost {
+  background: transparent;
+  border: 1px dashed rgba(36,49,74,0.08);
+  color: #24314a;
+  height: 44px;
+  border-radius: 10px;
+}
+
+/* QR preview area */
+#qrPreview {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* QR image */
+#qrPreview img {
+  width: 220px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0.5rem;
+  border: 1px solid rgba(36,49,74,0.04);
+}
+
+/* Download / copy row */
+.preview-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+}
+
+/* Small helper text */
+.helper {
+  font-size: 0.85rem;
+  color: #5c6b80;
+}
+
+/* Responsive tweaks */
+@media (max-width: 576px) {
+  .card-qr { padding: 1rem; border-radius: 12px; }
+  #qrPreview img { width: 180px; height: 180px; }
+}
+
+/* Subtle focus state for accessibility */
+.form-control:focus, .form-select:focus, .btn:focus {
+  outline: none;
+  box-shadow: 0 6px 18px rgba(43,128,255,0.12);
+  border-color: rgba(43,128,255,0.25);
+}
